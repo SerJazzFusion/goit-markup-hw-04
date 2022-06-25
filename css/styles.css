@@ -12,6 +12,7 @@
   --border-color: #eeeeee;
   --logo-text-color: #000000;
   --bgcolor-btn: #188ce8;
+  --border-logo-color: #AFB1B8;
 }
 
 /* Утилиты и общие правила */
@@ -118,6 +119,10 @@ height: auto;
   margin-right: 50px;
 }
 
+
+
+
+
 .header-flex {
   display: flex;
   align-items: center;
@@ -162,6 +167,35 @@ height: auto;
 .line {
   text-decoration: none;
 }
+
+
+
+/* .icon-mail::before {
+ content: "";
+ width: 16px;
+ height: 12px;
+ display: inline-flex;
+ background-image: url(../images/icons-cont/envelope.svg);
+ background-size: contain;
+ margin-right: 10px;
+ background-repeat: no-repeat;
+
+}
+
+.icon-tel::before {
+content: "";
+width: 10px;
+  height: 16px;
+  display: inline-flex;
+  background-image: url(../images/icons-cont/smartphone.svg);
+  background-size: contain;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  
+} */
+
+
+
 
 /* Герой */
 
@@ -221,12 +255,15 @@ height: auto;
   text-align: center;
   letter-spacing: 0.06em;
   border: none;
+
+  
   border-radius: 4px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--bgcolor-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Ососбенности */
@@ -251,6 +288,22 @@ height: auto;
 .benefits-item:last-child {
   margin-right: 0;
 }
+
+
+
+.benefit-box-icon {
+ display: flex;
+  
+    height: 120px;
+    background-color: var(--second-bgc-color);
+    margin-bottom: 30px;
+    border-radius: 4px;
+    
+    justify-content: center;
+    align-items: center;
+      
+}
+
 
 .title {
   width: 270px;
@@ -288,7 +341,9 @@ height: auto;
   margin-right: 0;
 }
 
-.about-title {
+.about-title,
+.team-title,
+.customers-title {
   margin-bottom: 50px;
 
   color: var(--primary-text-color);
@@ -319,15 +374,6 @@ height: auto;
   display: block;
 }
 
-.team-title {
-  margin-bottom: 50px;
-
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-}
-
 .team .title {
   font-weight: 500;
   font-size: 16px;
@@ -340,11 +386,78 @@ height: auto;
   text-align: center;
 }
 
+
+
+.list-icon {
+width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  
+}
+
+
+
+.icon-soc {
+ 
+  background-position: center;
+  
+}
+
+.list-style-social {
+  list-style: none;
+  margin-top: 16px;
+  background-color: var(--main-bgc-text);
+
+}
+
 .team-undercard {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--main-bgc-text);
   border-radius: 0px 0px 4px 4px;
+}
+/* Постоянные клиенты */
+
+.customer-box {
+display: flex;
+
+  width: 170px;
+  height: 92px;
+  background-color: var(--main-bgc-text);
+  border: 1px solid var(--border-logo-color);
+    border-radius: 4px;
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.customer-box:hover {
+  border-color: var(--accent-color);
+}
+
+.customer-box:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customer-link {
+padding: 16px 32px;
+
+  fill: var(--border-logo-color);
+  
+  
+}
+
+.customer-link:hover {
+  fill: var(--accent-color);
+  
+}
+
+.customer-icon {
+  width: 106px;
+  height: 60px;
+ 
 }
 
 /* Подвал */
@@ -396,6 +509,7 @@ height: auto;
 
 .exmp-button {
   padding: 6px 22px;
+
   /* margin-bottom: 50px; */
 
   background-color: var(--second-bgc-color);
@@ -409,6 +523,8 @@ height: auto;
   cursor: pointer;
   text-align: center;
   letter-spacing: 0.03em;
+
+  
   border-radius: 4px;
 }
 
@@ -420,6 +536,7 @@ height: auto;
 .exmp-button:focus {
   background-color: var(--accent-color);
   color: var(--main-bgc-text);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter .btn-item {
@@ -435,6 +552,11 @@ height: auto;
   margin-right: 30px;
   margin-bottom: 30px;
   background: var(--main-bgc-text);
+}
+
+.card-work:hover,
+.card-work:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-work:nth-child(3n) {
